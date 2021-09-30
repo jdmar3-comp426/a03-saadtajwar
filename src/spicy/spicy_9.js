@@ -25,6 +25,10 @@ export const repeat = (fn, n, ...params) => {
  */
 export const repeatDemo = () => {
 
+    for (let i = 0; i < 10; i++) {
+        console.log('Hello, world!');
+    }
+
 };
 
 
@@ -41,6 +45,12 @@ export const repeatDemo = () => {
  *   product of num1 and num2.
  */
 export const multiplyBy = (num1) => {
+
+    const multiplied = (num2) => {
+        return num1 * num2;
+    }
+
+    return multiplied;
 
 };
 
