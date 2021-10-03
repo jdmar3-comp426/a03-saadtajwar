@@ -7,6 +7,26 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 see under the methods section
 */
 
+const avgMpg = (array) => {
+
+    const result = array.reduce((acum, element) => {
+        return acum + (element.city_mpg + element.highway_mpg)
+    }, 0)
+
+    return result/(array.length*2);
+
+ }
+
+ const yearStats = (array) => {
+     const yearArray = array.map(obj => obj.year);
+     return getStatistics(yearArray);
+ }
+
+ const hybridRatio = (array) => {
+     
+ }
+
+
 
 /**
  * This object contains data that has to do with every car in the `mpg_data` object.
@@ -19,9 +39,12 @@ see under the methods section
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
+
+
+
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
+    avgMpg: avgMpg(mpg_data),
+    allYearStats: yearStats(mpg_data),
     ratioHybrids: undefined,
 };
 
