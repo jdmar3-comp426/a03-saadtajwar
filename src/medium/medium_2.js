@@ -23,7 +23,17 @@ const avgMpg = (array) => {
  }
 
  const hybridRatio = (array) => {
-     
+
+    let numHybrids = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].hybrid) {
+            numHybrids++;
+        }
+    }
+
+    return numHybrids/array.length;
+
  }
 
 
@@ -45,9 +55,16 @@ const avgMpg = (array) => {
 export const allCarStats = {
     avgMpg: avgMpg(mpg_data),
     allYearStats: yearStats(mpg_data),
-    ratioHybrids: undefined,
+    ratioHybrids: hybridRatio(mpg_data),
 };
 
+
+
+const hybridMakers = (array) => {
+
+    
+
+}
 
 /**
  * HINT: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
