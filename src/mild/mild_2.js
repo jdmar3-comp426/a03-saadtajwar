@@ -7,10 +7,12 @@
  */
 export function identifyVariable(variable) {
 
-   return {
+   const result = {
       type: typeof variable,
       value: variable
    }
+
+   return result;
 
 }
 
