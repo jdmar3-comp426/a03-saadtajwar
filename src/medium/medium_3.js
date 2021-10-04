@@ -73,7 +73,7 @@ export function searchName(car_data, searchTerm) {
  */
 export function searchByYear(car_data, years) {
 
-    const nums = [];
+    let nums = [];
     for (let i = years[0]; i <= years[years.length-1]; i++) {
         nums.push(i);
     }

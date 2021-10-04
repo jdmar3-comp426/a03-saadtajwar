@@ -32,10 +32,20 @@ export function identifyVariable(variable) {
  */
 export function identifyArray(array) {
 
+   let result = [];
 
+   for (let i = 0; i < array.length; i++) {
 
+      let entry = {};
+      entry.type = typeof array[i];
+      entry.value = array[i];
+      result.push(entry);
 
+   }
+
+   return result;
 }
+
 
 /**
  * mutates the object that is passed in.
@@ -55,6 +65,7 @@ export function identifyArray(array) {
  */
 export function removeKey(object, key) {
 
+   delete object.key;
 }
 
 /**
@@ -74,6 +85,14 @@ export function removeKey(object, key) {
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
 export function removeKeyNonDestructive(object, key) {
+
+   const {
+      [key]: remove,
+      ...rest
+   } = object;
+
+   console.log(rest);
+   return rest;
 
 }
 
@@ -99,5 +118,9 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
+
+   for (let i = 0; i < keyList.length; i++) {
+      delete object.keyList[i];
+   }
 
 }
