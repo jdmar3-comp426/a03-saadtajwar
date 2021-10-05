@@ -51,8 +51,8 @@ export function maxAndMin(numbers) {
     const min = Math.min(...numbers);
     const max = Math.max(...numbers);
     const result = {
-        min,
-        max
+        max,
+        min
     }
     return result;
 
