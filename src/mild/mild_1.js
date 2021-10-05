@@ -48,7 +48,7 @@ export function getIncreasingArray(startNumber, endNumber) {
  */
 export function maxAndMin(numbers) {
 
-    numbers.sort();
+    numbers.sort((a,b)=>a-b);
     const result = {
         min: numbers[0],
         max: numbers[numbers.length-1]
