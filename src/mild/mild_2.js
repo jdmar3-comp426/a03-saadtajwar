@@ -91,7 +91,6 @@ export function removeKeyNonDestructive(object, key) {
       ...rest
    } = object;
 
-   console.log(rest);
    return rest;
 
 }
