@@ -73,6 +73,7 @@ export function countArray(array) {
 
     let result = {}
 
+    // count
     for (let i = 0; i < array.length; i++) {
         if (array[i] in result) {
             result[array[i]]++;
