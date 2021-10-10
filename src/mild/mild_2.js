@@ -120,7 +120,7 @@ export function removeKeyNonDestructive(object, key) {
 export function removeKeys(object, keyList) {
 
    for (let i = 0; i < keyList.length; i++) {
-      delete object.keyList[i];
+      delete object[keyList[i]];
    }
 
 }
