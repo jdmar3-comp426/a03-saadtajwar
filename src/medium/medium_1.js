@@ -34,14 +34,14 @@ export function getMedian(array) {
 
     array.sort();
     const half = Math.floor(array.length/2);
-    if (array.length % 2 == 0) {
-        return (array[half-1] + array[half])/2;
-    } else {
-        return array[half];
-    }
+    return array[half];
+    // if (array.length % 2 == 0) {
+    //     return (array[half-1] + array[half])/2;
+    // } else {
+    //     return array[half];
+    // }
 
 }
-
 
 
 /**
