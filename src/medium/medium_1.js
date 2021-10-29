@@ -16,7 +16,7 @@ export function getSum(array) {
         sum += array[i];
     }
 
-    return sum;
+    return sum; // test commit
 
 }
 
