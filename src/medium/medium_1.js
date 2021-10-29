@@ -49,7 +49,7 @@ export function getMedian(array) {
  * @param {number[]} array
  * @returns {{min: *, median: *, max: *, variance: *, mean: *, length: *, sum: *, standard_deviation: *}}
  *
- * example: test
+ * example:
  * getStatistics([3,2,4,5,5,5,2,6,7])
  * {
   length: 9,
