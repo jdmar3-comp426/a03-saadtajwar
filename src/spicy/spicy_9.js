@@ -18,7 +18,7 @@ export const repeat = (fn, n, ...params) => {
 
     let result = [];
     for (let i = 0; i < n; i++) {
-        result.push(fn(params));
+        result.push(fn(...params));
     }
 
     return result;
