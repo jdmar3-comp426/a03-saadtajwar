@@ -7,15 +7,26 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 see under the methods section
 */
 
-const avgMpg = (array) => {
+const avgMpgCity = (array) => {
 
     const result = array.reduce((acum, element) => {
-        return acum + (element.city_mpg + element.highway_mpg)
+        return acum + (element.city_mpg)
     }, 0)
 
     return result/(array.length*2);
 
  }
+
+ const avgMpgHigh = (array) => {
+
+    const result = array.reduce((acum, element) => {
+        return acum + (element.highway_mpg)
+    }, 0)
+
+    return result/(array.length*2);
+
+ }
+
 
  const yearStats = (array) => {
      const yearArray = array.map(obj => obj.year);
@@ -53,7 +64,10 @@ const avgMpg = (array) => {
 
 
 export const allCarStats = {
-    avgMpg: avgMpg(mpg_data),
+    avgMpg: {
+        city: avgMpgCity(mpg_data),
+        highway: avgMpgHigh(mpg_data)
+    },
     allYearStats: yearStats(mpg_data),
     ratioHybrids: hybridRatio(mpg_data),
 };
