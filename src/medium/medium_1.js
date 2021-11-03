@@ -32,12 +32,12 @@ export function getSum(array) {
  */
 export function getMedian(array) {
 
-    array.sort();
+    const sortedArray = array.sort((a,b)=>a-b);
     const half = Math.floor(array.length/2);
     if (array.length % 2 == 0) {
-        return (array[half-1]);
+        return (sortedArray[half-1]);
     } else {
-        return array[half];
+        return sortedArray[half];
     }
 
 }
