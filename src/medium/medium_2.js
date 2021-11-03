@@ -13,7 +13,7 @@ const avgMpgCity = (array) => {
         return acum + (element.city_mpg)
     }, 0)
 
-    return result/(array.length*2);
+    return result/(array.length);
 
  }
 
@@ -23,7 +23,7 @@ const avgMpgCity = (array) => {
         return acum + (element.highway_mpg)
     }, 0)
 
-    return result/(array.length*2);
+    return result/(array.length);
 
  }
 
