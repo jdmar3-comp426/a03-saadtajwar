@@ -123,4 +123,6 @@ export function removeKeys(object, keyList) {
       delete object[keyList[i]];
    }
 
+   return object;
+
 }
