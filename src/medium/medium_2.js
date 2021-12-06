@@ -7,6 +7,47 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 see under the methods section
 */
 
+const avgMpgCity = (array) => {
+
+    const result = array.reduce((acum, element) => {
+        return acum + (element.city_mpg)
+    }, 0)
+
+    return result/(array.length);
+
+ }
+
+ const avgMpgHigh = (array) => {
+
+    const result = array.reduce((acum, element) => {
+        return acum + (element.highway_mpg)
+    }, 0)
+
+    return result/(array.length);
+
+ }
+
+
+ const yearStats = (array) => {
+     const yearArray = array.map(obj => obj.year);
+     return getStatistics(yearArray);
+ }
+
+ const hybridRatio = (array) => {
+
+    let numHybrids = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].hybrid) {
+            numHybrids++;
+        }
+    }
+
+    return numHybrids/array.length;
+
+ }
+
+
 
 /**
  * This object contains data that has to do with every car in the `mpg_data` object.
@@ -19,12 +60,25 @@ see under the methods section
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
+
+
+
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: {
+        city: avgMpgCity(mpg_data),
+        highway: avgMpgHigh(mpg_data)
+    },
+    allYearStats: yearStats(mpg_data),
+    ratioHybrids: hybridRatio(mpg_data),
 };
 
+
+
+const hybridMakers = (array) => {
+
+    
+
+}
 
 /**
  * HINT: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
